@@ -11,16 +11,10 @@ def get_message():
     # weekday()는 월요일(0)부터 일요일(6)까지 반환
     if now.weekday() < 5:
         # 평일: 월~금
-        return (
-            "좋은 아침입니다! 아침 9시 데일리스크럼 이전까지 기상인증사진(책상이나 카페나 뭐든 침대에서 벗어난 사진)을 올려주세요."
-            + f" DEBUG: now.weekday() : {now.weekday()}"
-        )
+        return "좋은 아침입니다! 아침 9시 데일리스크럼 이전까지 기상인증사진(책상이나 카페나 뭐든 침대에서 벗어난 사진)을 올려주세요."
     else:
         # 주말: 토, 일
-        return (
-            "좋은 주말입니다! 기상인증사진을 선택적으로 인증해주세요."
-            + f" DEBUG: now.weekday() : {now.weekday()}"
-        )
+        return "좋은 주말입니다! 기상인증사진을 선택적으로 인증해주세요."
 
 
 def send_discord_message(message, webhook_url):
