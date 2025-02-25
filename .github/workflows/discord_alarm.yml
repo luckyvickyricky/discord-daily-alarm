@@ -1,10 +1,8 @@
 name: Discord Daily Alarm
 
 on:
-  push:
-    branches: [ "main" ]
   schedule:
-    - cron: '0 21 * * *' # 매일 21:00 UTC (한국시간 오전 6시)
+    - cron: '0 23 * * *' # 매일 23:00 UTC (한국시간 오전 8시)
 
 jobs:
   send_alarm:
@@ -24,4 +22,4 @@ jobs:
         run: pip install requests
 
       - name: 알람 스크립트 실행
-        run: python alarm.py
+        run: python morning-alarm.py
